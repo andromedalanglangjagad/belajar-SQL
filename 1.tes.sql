@@ -14,3 +14,5 @@ age,
 FROM parks_and_recreation.employee_demographics;
 #tes aja sih
 
+select MAX(salary)
+from parks_and_recreation.employee_salary;
