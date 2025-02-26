@@ -5,8 +5,8 @@ USE parks_and_recreation;
 -- UPPER LOWWER untuk penulisan
 -- RTRIM untuk penempatan
 -- SUBSTRING(nama variabel, letak mulai variabel, jumklah variabel) pemotongan/pemilihan variabel
---
---
+-- REPLACE untuk penempatan/perpindahan ulang variabel
+-- LOCATE untuk mencari letak variabel
 
 
 
