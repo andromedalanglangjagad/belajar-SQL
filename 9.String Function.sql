@@ -7,6 +7,7 @@ USE parks_and_recreation;
 -- SUBSTRING(nama variabel, letak mulai variabel, jumklah variabel) pemotongan/pemilihan variabel
 -- REPLACE untuk penempatan/perpindahan ulang variabel
 -- LOCATE untuk mencari letak variabel
+-- CONCAT untuk menggabungkan 2 variabel
 
 
 
