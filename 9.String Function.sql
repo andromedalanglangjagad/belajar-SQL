@@ -1,6 +1,18 @@
 -- String Functions
 USE parks_and_recreation;
 
+-- LENGTH untuk panjang sesuatu
+-- UPPER LOWWER untuk penulisan
+-- RTRIM untuk penempatan
+-- SUBSTRING(nama variabel, letak mulai variabel, jumklah variabel) pemotongan/pemilihan variabel
+--
+--
+
+
+
+
+
+
 
 SELECT LENGTH('SKYFALL');
 
