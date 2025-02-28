@@ -1,7 +1,7 @@
 -- CTEs
 USE parks_and_recreation;
 
-WITH CTE_Example AS 
+WITH CTE_Example(JENIS, RATARATA, MAKSIMAL, MINIMAL, TOTAL) AS 
 (
 SELECT gender, AVG(salary) avg_sal, MAX(salary) max_sal, MIN(salary) min_sal, COUNT(salary) count_sal
 FROM employee_demographics dem
