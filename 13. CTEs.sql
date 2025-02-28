@@ -30,7 +30,7 @@ SELECT AVG(avg_sal)
 FROM CTE_Example;
 
 
-
+-- CONTOH UNTUK PENGGUNAAN 2 VIRTUAL TABLE
 WITH CTE_Example AS 
 (
 SELECT employee_id, gender, birth_date
