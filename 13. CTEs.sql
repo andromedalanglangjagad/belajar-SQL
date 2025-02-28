@@ -15,7 +15,7 @@ SELECT *
 FROM CTE_Example
 ;
 
-
+-- CONTOH SALAH UNTUK PENULISAN CTEs
 SELECT AVG(avg_sal)
 FROM (
 SELECT gender, AVG(salary) avg_sal, MAX(salary) max_sal, MIN(salary) min_sal, COUNT(salary) count_sal
