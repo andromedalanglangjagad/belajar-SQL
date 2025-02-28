@@ -9,7 +9,7 @@ JOIN employee_salary sal
 	ON dem.employee_id = sal.employee_id
 GROUP BY gender
 )
-SELECT AVG(avg_sal)
+SELECT *
 FROM CTE_Example
 ;
 
@@ -24,9 +24,37 @@ GROUP BY gender
 ) example_subquery
 ;
 
-
 SELECT AVG(avg_sal)
 FROM CTE_Example;
+
+
+
+WITH CTE_Example AS 
+(
+SELECT employee_id, gender, birth_date
+FROM employee_demographics
+WHERE birth_date > '1985-01-01'
+),
+CTE_Example2 AS
+(
+SELECT employee_id, salary
+FROM employee_Salary
+WHERE salary > 5000
+)
+SELECT *
+FROM CTE_Example
+JOIN CTE_Example2
+	on CTE_Example.employee_id = CTE_Example2.employee_id
+;
+
+
+
+
+
+
+
+
+
 
 
 
