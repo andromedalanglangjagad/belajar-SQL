@@ -112,9 +112,11 @@ CALL GetTotalEmployeesByGender('Female');
 -- CALL UpdateSalaryByOccupation('Office Manager');
 
 DELIMITER $$
+CREATE PROCEDURE UpdateSalaryByOccupation()
 BEGIN
+SELECT
 END $$
-DELIMITER;
+DELIMITER ;
 
 
 
