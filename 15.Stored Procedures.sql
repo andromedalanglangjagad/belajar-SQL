@@ -121,7 +121,7 @@ WHERE salary * 1.1
 END $$
 DELIMITER ;
 
-
+CALL UpdateSalaryBYOccupation('Office Manager');
 
 
 -- ============================================
