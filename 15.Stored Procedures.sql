@@ -111,14 +111,16 @@ CALL GetTotalEmployeesByGender('Female');
 -- Stored procedure harus bisa dipanggil dengan:
 -- CALL UpdateSalaryByOccupation('Office Manager');
 
+
+SET SQL_SAFE_UPDATES = 0;
+
 DELIMITER $$
-CREATE PROCEDURE UpdateSalaryByOccupation(job_title VARCHAR(50))
+CREATE PROCEDURE UpdateSalaryByOccupation(IN job_title VARCHAR(50))
 BEGIN
-SELECT *
-FROM employee_salary
-SET salary = salary * 1.1
-WHERE occupation = job_title
-;
+	UPDATE employee_salary
+	SET salary = salary * 1.1
+    WHERE occupation = job_title
+	;
 END $$
 DELIMITER ;
 
