@@ -90,10 +90,10 @@ CALL GetEmployeeByID(3);
 DELIMITER $$
 CREATE PROCEDURE GetTotalEmployeesByGender(gender1 Varchar(10))
 BEGIN 
-SELECT *
-FROM employee_demographics
-WHERE gender = gender1
-;
+	SELECT *
+	FROM employee_demographics
+	WHERE gender = gender1
+	;
 END $$
 DELIMITER ;
 
