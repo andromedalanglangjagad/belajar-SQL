@@ -124,8 +124,9 @@ BEGIN
 END $$
 DELIMITER ;
 
-CALL UpdateSalaryBYOccupation('Office Manager');
+SELECT * FROM employee_salary WHERE occupation = 'Office Manager';
 
+CALL UpdateSalaryBYOccupation('Office Manager');
 
 -- ============================================
 
