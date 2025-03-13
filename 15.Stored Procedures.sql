@@ -116,7 +116,8 @@ CREATE PROCEDURE UpdateSalaryByOccupation(job_title VARCHAR(50))
 BEGIN
 SELECT *
 FROM employee_salary
-WHERE salary * 1.1
+SET salary = salary * 1.1
+WHERE occupation = job_title
 ;
 END $$
 DELIMITER ;
