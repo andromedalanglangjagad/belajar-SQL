@@ -138,6 +138,20 @@ CALL UpdateSalaryBYOccupation('Office Manager');
 -- dan gaji (`salary`) dari karyawan dengan gaji tertinggi di tabel `employee_salary`.
 -- Stored procedure harus bisa dipanggil dengan:
 -- CALL GetHighestSalaryEmployee();
+
+
+DELIMITER $$
+CREATE PROCEDURE GetHighestSalaryEmployee()
+BEGIN
+	SELECT *
+	FROM employee_salary
+	ORDER BY salary desc LIMIT 1
+	;
+END $$
+DELIMITER ;
+
+CALL GetHighestSalaryEmployee();
+
 -- ============================================
 
 
