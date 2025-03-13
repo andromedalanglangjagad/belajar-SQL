@@ -112,7 +112,7 @@ CALL GetTotalEmployeesByGender('Female');
 -- CALL UpdateSalaryByOccupation('Office Manager');
 
 
-SET SQL_SAFE_UPDATES = 0;
+SET SQL_SAFE_UPDATES = 1;
 
 DELIMITER $$
 CREATE PROCEDURE UpdateSalaryByOccupation(IN job_title VARCHAR(50))
