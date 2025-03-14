@@ -123,7 +123,8 @@ CREATE TRIGGER UpdateEmployeeAge
 	AFTER UPDATE ON employee_demographics
     FOR EACH ROW
 BEGIN
-
+	INSERT iNTO employee_demographics(age)
+    VALUES(NEW.age);
 END $$
 DELIMITER ;
 
