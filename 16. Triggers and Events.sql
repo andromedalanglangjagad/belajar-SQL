@@ -90,6 +90,18 @@ DELIMITER ;
 -- yang akan mencegah penghapusan (`DELETE`) data karyawan yang memiliki 
 -- jabatan "Director of Parks and Recreation" di tabel `employee_salary`.
 -- Jika ada upaya penghapusan, trigger harus membatalkan operasi tersebut.
+
+DELIMITER $$
+CREATE TRIGGER PreventDirectorDeletion
+	BEFORE DELETE ON employee_salary
+    FOR EACH ROW
+BEGIN 
+	
+END $$
+DELIMITER ;
+
+
+
 -- ============================================
 
 
