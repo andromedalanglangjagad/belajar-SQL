@@ -1,4 +1,7 @@
 -- Stored Procedures
+-- sebuah function untuk dipanggil
+
+
 USE parks_and_recreation;
 
 
