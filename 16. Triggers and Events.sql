@@ -82,7 +82,6 @@ BEGIN
 	END IF;
 END $$
 DELIMITER ;
-
 -- ============================================
 
 
@@ -105,7 +104,6 @@ BEGIN
 END $$
 DELIMITER ;
 
-
 select *
 from employee_salary;
 -- ============================================
@@ -127,8 +125,6 @@ BEGIN
     VALUES(NEW.age);
 END $$
 DELIMITER ;
-
-
 -- ============================================
 
 
