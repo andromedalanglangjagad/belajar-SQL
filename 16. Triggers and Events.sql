@@ -61,6 +61,26 @@ SHOW VARIABLES LIKE 'event%';
 -- Tabel `job_history` harus menyimpan `employee_id`, `old_occupation`, 
 -- `new_occupation`, dan `change_date`.
 -- Trigger harus berjalan saat ada perubahan pada `occupation` di `employee_salary`.
+
+CREATE TABLE job_history(
+	log_id INT AUTO_INCREMENT PRIMARY KEY,
+    employee_id INT,
+    old_occupation VARCHAR(50),
+    new_occupation VARCHAR(50),
+    change_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+DELIMITER $$
+CREATE TRIGGER LogJobChange
+	AFTER UPDATE ON employee_salary
+    FOR EACH ROW
+BEGIN
+	INSERT INTO job_history(employee_id, old_occupation, new_occupation)
+    VALUES(OLD.employee_id, OLD.occupation, NEW.occupation);
+END $$
+DELIMITER ;
+
 -- ============================================
 
 
