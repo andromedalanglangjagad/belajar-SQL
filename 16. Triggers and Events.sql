@@ -98,12 +98,16 @@ CREATE TRIGGER PreventDirectorDeletion
 	BEFORE DELETE ON employee_salary
     FOR EACH ROW
 BEGIN 
-	
+		IF occupation = 'Director of Parks and Recreation' THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Penhapusan Karyawan tidak bisa dilakukan';
+        END IF;
 END $$
 DELIMITER ;
 
 
-
+select *
+from employee_salary;
 -- ============================================
 
 
