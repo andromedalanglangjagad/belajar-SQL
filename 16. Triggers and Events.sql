@@ -1,4 +1,7 @@
 -- Triggers and Events
+-- Triggers untuk otomatis memberi respon terhadap perubahan data(entah penolakan,penerimaaan dll)
+-- Events untuk
+
 
 USE parks_and_recreation;
 
