@@ -73,9 +73,10 @@ CREATE TABLE job_history(
 
 DELIMITER $$
 CREATE TRIGGER LogJobChange
-	AFTER UPDATE ON employee_salary
+	BEFORE UPDATE ON employee_salary
     FOR EACH ROW
 BEGIN
+
 	INSERT INTO job_history(employee_id, old_occupation, new_occupation)
     VALUES(OLD.employee_id, OLD.occupation, NEW.occupation);
 END $$
@@ -111,6 +112,17 @@ DELIMITER ;
 -- yang akan memperbarui kolom `age` di `employee_demographics` 
 -- berdasarkan `birth_date` setiap kali ada pembaruan data (`UPDATE`).
 -- Usia dihitung dari `YEAR(CURDATE()) - YEAR(birth_date)`.
+
+DELIMITER $$
+CREATE TRIGGER UpdateEmployeeAge
+	AFTER UPDATE ON employee_demographics
+    FOR EACH ROW
+BEGIN
+
+END $$
+DELIMITER ;
+
+
 -- ============================================
 
 
