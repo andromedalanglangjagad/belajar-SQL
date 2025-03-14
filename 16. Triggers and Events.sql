@@ -76,9 +76,10 @@ CREATE TRIGGER LogJobChange
 	BEFORE UPDATE ON employee_salary
     FOR EACH ROW
 BEGIN
-
-	INSERT INTO job_history(employee_id, old_occupation, new_occupation)
-    VALUES(OLD.employee_id, OLD.occupation, NEW.occupation);
+	IF OLD.occupation <> NEW.occupation THEN
+		INSERT INTO job_history(employee_id, old_occupation, new_occupation)
+		VALUES(OLD.employee_id, OLD.occupation, NEW.occupation);
+	END IF;
 END $$
 DELIMITER ;
 
