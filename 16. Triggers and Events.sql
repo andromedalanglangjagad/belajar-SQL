@@ -153,10 +153,10 @@ DELIMITER ;
 DELIMITER $$
 CREATE EVENT AnnualSalaryIncrease
 ON SCHEDULE EVERY 1 YEAR
-STARTS TIMESTAMP(CONCAT(YEAR(CURDATE)))
+STARTS TIMESTAMP(CONCAT(YEAR(CURDATE)) + 1, '-01-01 00:00:00')
 DO
 UPDATE employee_salary
-WHERE employee_salary * 1.05 IN
+SET employee_salary * 1.05;
 
 DELIMITER ;
 -- ============================================
