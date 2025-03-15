@@ -138,11 +138,8 @@ DELIMITER $$
 CREATE EVENT DeleteEmployeeWithoutSalary
 ON SCHEDULE EVERY 1 MONTH
 DO
-BEGIN
-	DELETE FROM employee_salary
-	IF salary = NULL THEN DELETE
-
-END $$
+	DELETE FROM employee_demographics
+	WHERE employee_id NOT IN(SELECT employee_id FROM employee_salary);
 DELIMITER ;
 -- ============================================
 
