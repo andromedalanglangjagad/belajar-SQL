@@ -134,7 +134,16 @@ DELIMITER ;
 -- jika tidak memiliki data gaji di `employee_salary`.
 -- Event ini harus dijalankan setiap bulan sekali.
 
+DELIMITER $$
+CREATE EVENT DeleteEmployeeWithoutSalary
+ON SCHEDULE EVERY 1 MONTH
+DO
+BEGIN
+	DELETE FROM employee_salary
+	IF salary = NULL THEN DELETE
 
+END $$
+DELIMITER ;
 -- ============================================
 
 
