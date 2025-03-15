@@ -149,6 +149,16 @@ DELIMITER ;
 -- Buatlah event bernama `AnnualSalaryIncrease`
 -- yang akan menaikkan gaji semua karyawan sebesar 5% setiap tanggal 1 Januari.
 -- Perubahan gaji dilakukan di tabel `employee_salary`.
+
+DELIMITER $$
+CREATE EVENT AnnualSalaryIncrease
+ON SCHEDULE EVERY 1 YEAR
+STARTS TIMESTAMP(CONCAT(YEAR(CURDATE)))
+DO
+UPDATE employee_salary
+WHERE employee_salary * 1.05 IN
+
+DELIMITER ;
 -- ============================================
 
 
