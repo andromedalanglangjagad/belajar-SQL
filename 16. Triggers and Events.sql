@@ -172,6 +172,7 @@ DELIMITER ;
 DELIMITER $$
 CREATE EVENT ResetSalaryForExiterEmployees
 ON SCHEDULE EVERY 1 MONTH
+STARTS TIMESTAMP(CONCAT(MONTH(CURDATE)) +)
 DELIMITER ;
 -- ============================================
 
