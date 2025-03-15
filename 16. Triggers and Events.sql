@@ -168,6 +168,11 @@ DELIMITER ;
 -- yang akan mengatur gaji karyawan menjadi NULL jika mereka sudah keluar dari pekerjaan.
 -- Karyawan dianggap keluar jika tidak ada di `employee_demographics` tetapi masih ada di `employee_salary`.
 -- Event ini harus berjalan setiap akhir bulan.
+
+DELIMITER $$
+CREATE EVENT ResetSalaryForExiterEmployees
+ON SCHEDULE EVERY 1 MONTH
+DELIMITER ;
 -- ============================================
 
 
