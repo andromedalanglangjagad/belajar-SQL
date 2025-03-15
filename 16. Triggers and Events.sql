@@ -173,6 +173,9 @@ DELIMITER $$
 CREATE EVENT ResetSalaryForExiterEmployees
 ON SCHEDULE EVERY 1 MONTH
 STARTS TIMESTAMP(CONCAT(MONTH(CURDATE)) +)
+	UPDATE employee_salary
+	WHERE employee_id NOT IN (SELECT employee_id FROM employee_demographics);
+
 DELIMITER ;
 -- ============================================
 
