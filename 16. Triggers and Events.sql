@@ -121,8 +121,7 @@ CREATE TRIGGER UpdateEmployeeAge
 	AFTER UPDATE ON employee_demographics
     FOR EACH ROW
 BEGIN
-	INSERT iNTO employee_demographics(age)
-    VALUES(NEW.age);
+	SET NEW.age = TIMESTAMPDIFF(YEAR, NEW.birth_date, CURDATE());
 END $$
 DELIMITER ;
 -- ============================================
@@ -134,6 +133,8 @@ DELIMITER ;
 -- yang akan menghapus data karyawan dari tabel `employee_demographics` 
 -- jika tidak memiliki data gaji di `employee_salary`.
 -- Event ini harus dijalankan setiap bulan sekali.
+
+
 -- ============================================
 
 
