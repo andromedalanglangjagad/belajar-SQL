@@ -62,6 +62,27 @@ GROUP BY gender;
 -- ============================================
 
 
+-- ============================================
+-- Soal 4: Urutkan Karyawan Berdasarkan Gaji (Tertinggi ke Terendah)
+-- Buatlah query yang menampilkan semua karyawan dari tabel `employee_salary`,
+-- dan urutkan berdasarkan gaji (`salary`) dari yang tertinggi ke terendah.
+-- ============================================
+
+
+-- ============================================
+-- Soal 5: Urutkan Karyawan Berdasarkan Usia (Tertua ke Termuda)
+-- Buatlah query yang menampilkan semua karyawan dari tabel `employee_demographics`, 
+-- dan urutkan berdasarkan usia (dihitung dari `birth_date`).
+-- ============================================
+
+
+-- ============================================
+-- Soal 6: Urutkan Departemen Berdasarkan Jumlah Karyawan
+-- Buatlah query yang menghitung jumlah karyawan di setiap departemen (`dept_id`) 
+-- dan mengurutkannya dari jumlah karyawan terbanyak ke paling sedikit.
+-- ============================================
+
+
 
 
 
