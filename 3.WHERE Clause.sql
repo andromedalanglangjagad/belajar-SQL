@@ -113,7 +113,9 @@ SELECT * FROM employee_demographics;
 -- Gunakan tabel `employee_demographics` dan ambil data karyawan yang memiliki
 -- `birth_date` di bulan Maret.
 
-
+SELECT *
+FROM employee_demographics
+WHERE MONTH(birth_date) = 3; 
 -- ============================================
 
 
