@@ -55,6 +55,10 @@ GROUP BY dept_id;
 -- Soal 3: Jumlah Karyawan Berdasarkan Gender
 -- Buatlah query yang menghitung jumlah karyawan berdasarkan gender (`gender`) 
 -- dari tabel `employee_demographics`. Tampilkan gender dan jumlah karyawan untuk setiap gender.
+
+SELECT gender, COUNT(*) jumlah_karyawan
+FROM employee_demographics
+GROUP BY gender;
 -- ============================================
 
 
