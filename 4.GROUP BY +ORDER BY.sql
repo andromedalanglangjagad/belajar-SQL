@@ -89,9 +89,10 @@ ORDER BY birth_date ASC;
 -- Buatlah query yang menghitung jumlah karyawan di setiap departemen (`dept_id`) 
 -- dan mengurutkannya dari jumlah karyawan terbanyak ke paling sedikit.
 
-SELECT first_name, last_name, age, gender, birth_date, COUNT(employee_id) jumlah_karyawan
-FROM employee_demographics
-ORDER BY employee_id DESC;
+SELECT dept_id, COUNT(employee_id) jumlah_karyawan
+FROM employee_salary
+GROUP BY dept_id
+ORDER BY jumlah_karyawan DESC;
 -- ============================================
 
 
