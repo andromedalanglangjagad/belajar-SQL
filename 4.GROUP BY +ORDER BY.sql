@@ -77,6 +77,10 @@ ORDER BY salary DESC;
 -- Soal 5: Urutkan Karyawan Berdasarkan Usia (Tertua ke Termuda)
 -- Buatlah query yang menampilkan semua karyawan dari tabel `employee_demographics`, 
 -- dan urutkan berdasarkan usia (dihitung dari `birth_date`).
+
+SELECT *
+FROM employee_demographics
+ORDER BY birth_date ASC;
 -- ============================================
 
 
