@@ -21,3 +21,51 @@ SELECT occupation, salary
 FROM employee_salary
 GROUP BY occupation, salary
 ;
+
+
+
+-- SOAL GPT
+
+
+
+-- ============================================
+-- Soal 1: Hitung Jumlah Karyawan Berdasarkan Jabatan
+-- Buatlah query yang menghitung jumlah karyawan berdasarkan jabatan (`occupation`) 
+-- dari tabel `employee_salary`. Tampilkan nama jabatan dan jumlah karyawan dalam setiap jabatan.
+
+SELECT occupation, COUNT(*) total_karyawan
+FROM employee_salary
+GROUP BY occupation; 
+
+-- ============================================
+
+
+-- ============================================
+-- Soal 2: Rata-rata Gaji di Setiap Departemen
+-- Buatlah query yang menghitung rata-rata gaji (`salary`) di setiap departemen (`dept_id`) 
+-- pada tabel `employee_salary`. Tampilkan ID departemen dan rata-rata gaji.
+-- ============================================
+
+
+-- ============================================
+-- Soal 3: Jumlah Karyawan Berdasarkan Gender
+-- Buatlah query yang menghitung jumlah karyawan berdasarkan gender (`gender`) 
+-- dari tabel `employee_demographics`. Tampilkan gender dan jumlah karyawan untuk setiap gender.
+-- ============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
