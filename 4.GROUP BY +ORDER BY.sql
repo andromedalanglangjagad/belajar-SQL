@@ -88,6 +88,8 @@ ORDER BY birth_date ASC;
 -- Soal 6: Urutkan Departemen Berdasarkan Jumlah Karyawan
 -- Buatlah query yang menghitung jumlah karyawan di setiap departemen (`dept_id`) 
 -- dan mengurutkannya dari jumlah karyawan terbanyak ke paling sedikit.
+
+
 -- ============================================
 
 
