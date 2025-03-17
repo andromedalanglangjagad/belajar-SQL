@@ -44,6 +44,10 @@ GROUP BY occupation;
 -- Soal 2: Rata-rata Gaji di Setiap Departemen
 -- Buatlah query yang menghitung rata-rata gaji (`salary`) di setiap departemen (`dept_id`) 
 -- pada tabel `employee_salary`. Tampilkan ID departemen dan rata-rata gaji.
+
+SELECT dept_id, AVG(salary) AVG_GAJI
+FROM employee_salary
+GROUP BY dept_id;
 -- ============================================
 
 
