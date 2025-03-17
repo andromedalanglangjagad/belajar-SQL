@@ -66,6 +66,10 @@ GROUP BY gender;
 -- Soal 4: Urutkan Karyawan Berdasarkan Gaji (Tertinggi ke Terendah)
 -- Buatlah query yang menampilkan semua karyawan dari tabel `employee_salary`,
 -- dan urutkan berdasarkan gaji (`salary`) dari yang tertinggi ke terendah.
+
+SELECT *
+FROM employee_salary
+ORDER BY salary DESC;
 -- ============================================
 
 
