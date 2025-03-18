@@ -10,7 +10,7 @@ HAVING AVG(age) > 40
 -- HAVING bisa digunakan setelah group by saja
 
 
-SELECT occupation, AVG(salary)
+SELECT occupation, AVG(salary) AVG_SALARY
 FROM employee_salary
 WHERE occupation LIKE '%manager%'
 GROUP BY occupation
