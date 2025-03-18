@@ -87,4 +87,11 @@ FROM employee_salary;
 -- Tampilkan hanya departemen yang memiliki minimal 2 karyawan setelah penyaringan gaji.
 -- Kolom yang ditampilkan: dept_id, jumlah_karyawan
 -- Gunakan WHERE untuk menyaring gaji, GROUP BY untuk mengelompokkan, dan HAVING untuk memfilter jumlah karyawan.
+
+SELECT dept_id, COUNT(*) jumlah_karyawan
+FROM employee_salary
+WHERE salary > 40000
+GROUP BY dept_id
+HAVING jumlah_karyawan >= 2
+;
 -- ============================================
