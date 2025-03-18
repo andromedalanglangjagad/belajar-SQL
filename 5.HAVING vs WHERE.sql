@@ -1,7 +1,7 @@
 -- Having vs Where
 USE parks_and_recreation;
 
-SELECT gender, AVG(age)
+SELECT gender, AVG(age) AVG_AGE
 FROM employee_demographics
 GROUP BY gender
 HAVING AVG(age) > 40
