@@ -58,6 +58,7 @@ SELECT dept_id, COUNT(*) jumlah_karyawan
 FROM employee_salary
 GROUP BY dept_id
 HAVING jumlah_karyawan > 3
+;
 -- ============================================
 
 
@@ -68,10 +69,10 @@ HAVING jumlah_karyawan > 3
 -- Kolom yang ditampilkan: occupation, rata_rata_gaji, jumlah_karyawan
 -- Gunakan GROUP BY untuk mengelompokkan, dan HAVING untuk memfilter jabatan dengan COUNT() >= 2.
 
-SELECT occupation, AVG()rata_rata_gaji, COUNT(*) jumlah_karyawan
+SELECT occupation, AVG(salary) rata_rata_gaji, COUNT(*) jumlah_karyawan
 FROM employee_salary
 GROUP BY occupation
-HAVING 
+HAVING jumlah_karyawan >= 2
 ;
 -- ============================================
 
