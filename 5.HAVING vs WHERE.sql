@@ -53,6 +53,11 @@ GROUP BY dept_id
 -- tetapi hanya menampilkan departemen yang memiliki lebih dari 3 karyawan.
 -- Kolom yang ditampilkan: dept_id, jumlah_karyawan
 -- Gunakan GROUP BY untuk mengelompokkan, dan HAVING untuk memfilter hasil agregasi.
+
+SELECT dept_id, COUNT(*) jumlah_karyawan
+FROM employee_salary
+GROUP BY dept_id
+HAVING jumlah_karyawan > 3
 -- ============================================
 
 
