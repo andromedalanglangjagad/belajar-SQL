@@ -16,3 +16,8 @@ WHERE occupation LIKE '%manager%'
 GROUP BY occupation
 HAVING AVG(salary) > 75000
 ;
+
+
+
+-- SOAL GPT
+
