@@ -39,6 +39,11 @@ WHERE salary > 50000
 -- Buatlah query yang menghitung jumlah karyawan di setiap departemen.
 -- Kolom yang ditampilkan: dept_id, jumlah_karyawan
 -- Gunakan fungsi COUNT() dan GROUP BY untuk mengelompokkan data berdasarkan dept_id.
+
+SELECT dept_id, COUNT(*) jumlah_karyawan
+FROM employee_salary
+GROUP BY dept_id
+;
 -- ============================================
 
 
