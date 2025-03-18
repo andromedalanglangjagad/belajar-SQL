@@ -26,7 +26,12 @@ HAVING AVG(salary) > 75000
 -- Buatlah query untuk menampilkan daftar karyawan yang memiliki gaji lebih dari 50.000.
 -- Kolom yang ditampilkan: first_name, last_name, salary, dept_id
 -- Gunakan klausa WHERE untuk memfilter data sebelum pengelompokan.
--- ============================================
+
+SELECT first_name, last_name, salary, dept_id
+FROM employee_salary
+WHERE salary > 50000
+;
+-- ===========================================
 
 
 -- ============================================
