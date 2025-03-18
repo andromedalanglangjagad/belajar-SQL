@@ -74,6 +74,9 @@ FROM employee_salary
 GROUP BY occupation
 HAVING jumlah_karyawan >= 2
 ;
+
+SELECT *
+FROM employee_salary;
 -- ============================================
 
 
