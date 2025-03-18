@@ -7,7 +7,7 @@ GROUP BY gender
 HAVING AVG(age) > 40
 ;
 
--- HAVING bisa digunakan setelah goup by saja
+-- HAVING bisa digunakan setelah group by saja
 
 
 SELECT occupation, AVG(salary)
