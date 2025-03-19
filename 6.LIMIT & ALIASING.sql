@@ -87,7 +87,6 @@ FROM employee_demographics
 WHERE first_name LIKE '%A%'
 ORDER BY first_name ASC
 ;
-
 -- ============================================
 
 
