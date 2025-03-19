@@ -49,6 +49,10 @@ FROM employee_salary
 -- Buatlah query yang menampilkan 3 karyawan termuda yang masih aktif bekerja di tabel `employee_demographics`.
 -- Gunakan alias untuk `birth_date` menjadi `Tanggal_Lahir` dan `first_name` menjadi `Nama_Depan`.
 -- Urutkan hasil berdasarkan usia termuda dan batasi hasilnya hanya 3 orang.
+
+SELECT CONCAT(first_name, ' ', last_name) Nama_lengkap, birth_date Tanggal_Lahir 
+FROM employee_demographics
+;
 -- ============================================
 
 
