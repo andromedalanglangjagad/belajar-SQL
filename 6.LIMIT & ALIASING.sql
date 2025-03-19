@@ -98,8 +98,11 @@ ORDER BY first_name ASC
 -- Urutkan hasil berdasarkan rata-rata gaji dari yang tertinggi ke terendah.
 -- Batasi hasilnya hanya menampilkan 5 departemen teratas.
 
-SELECT AVG(salary)
+SELECT dept_id, AVG(salary) Rata_Rata_Gaji
 FROM employee_salary
+GROUP BY dept_id
+ORDER BY Rata_Rata_Gaji DESC
+LIMIT 5
 ;
 -- ============================================
 
