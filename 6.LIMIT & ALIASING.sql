@@ -37,10 +37,6 @@ FROM employee_salary
 ORDER BY gaji_tertinggi DESC
 LIMIT 5
 ;
-
-SELECT *
-FROM employee_salary
-;
 -- ============================================
 
 
