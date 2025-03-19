@@ -21,7 +21,7 @@ limit 2, 1
 SELECT gender, avg(age) AS avg_age
 FROM employee_demographics
 group by gender
-HAVING avg_age > 40
+HAVING avg_age > 20
 ;
 
 -- SOAL GPT
@@ -64,6 +64,14 @@ LIMIT 3
 -- Gunakan alias `Jumlah_Karyawan` untuk hasil COUNT.
 -- Gunakan klausa HAVING agar hanya departemen dengan minimal 5 karyawan yang ditampilkan.
 -- Urutkan hasil berdasarkan jumlah karyawan dari yang terbanyak ke paling sedikit.
+
+SELECT dept_id, COUNT(*) AS Jumlah_karyawan
+FROM employee_salary
+GROUP BY dept_id
+HAVING COUNT(*) >= 1
+ORDER BY Jumlah_karyawan DESC
+LIMIT 5
+;
 -- ============================================
 
 
