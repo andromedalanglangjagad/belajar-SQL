@@ -31,6 +31,16 @@ HAVING avg_age > 40
 -- Buatlah query yang menampilkan 5 karyawan dengan gaji tertinggi dari tabel `employee_salary`.
 -- Gunakan alias untuk kolom nama (`first_name` dan `last_name`) agar ditampilkan sebagai `Nama_Karyawan`.
 -- Pastikan hasil diurutkan dari gaji tertinggi ke terendah dan hanya menampilkan 5 data teratas.
+
+SELECT CONCAT(first_name, ' ',last_name) Nama_karyawan, occupation, salary gaji_tertinggi
+FROM employee_salary
+ORDER BY gaji_tertinggi DESC
+LIMIT 5
+;
+
+SELECT *
+FROM employee_salary
+;
 -- ============================================
 
 
