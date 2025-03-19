@@ -50,8 +50,10 @@ FROM employee_salary
 -- Gunakan alias untuk `birth_date` menjadi `Tanggal_Lahir` dan `first_name` menjadi `Nama_Depan`.
 -- Urutkan hasil berdasarkan usia termuda dan batasi hasilnya hanya 3 orang.
 
-SELECT CONCAT(first_name, ' ', last_name) Nama_lengkap, birth_date Tanggal_Lahir 
+SELECT CONCAT(first_name, ' ', last_name) Nama_lengkap, birth_date Tanggal_Lahir, age 
 FROM employee_demographics
+ORDER BY age ASC
+LIMIT 3
 ;
 -- ============================================
 
