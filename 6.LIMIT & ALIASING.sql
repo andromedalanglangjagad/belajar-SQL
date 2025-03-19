@@ -82,8 +82,10 @@ LIMIT 5
 -- Gunakan alias `Nama_Karyawan` untuk kolom nama lengkap (`first_name` + ' ' + `last_name`).
 -- Urutkan berdasarkan `first_name` secara alfabetis.
 
-SELECT CONCAT(first_name, ' ', last_name) Nama_karyawan, 
+SELECT CONCAT(first_name, ' ', last_name) Nama_karyawan
 FROM employee_demographics
+WHERE first_name LIKE '%A%'
+ORDER BY first_name ASC
 ;
 
 -- ============================================
