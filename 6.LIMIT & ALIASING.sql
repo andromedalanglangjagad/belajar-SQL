@@ -97,6 +97,10 @@ ORDER BY first_name ASC
 -- Gunakan alias `Rata_Rata_Gaji` untuk hasil AVG.
 -- Urutkan hasil berdasarkan rata-rata gaji dari yang tertinggi ke terendah.
 -- Batasi hasilnya hanya menampilkan 5 departemen teratas.
+
+SELECT AVG(salary)
+FROM employee_salary
+;
 -- ============================================
 
 
