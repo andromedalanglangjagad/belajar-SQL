@@ -81,6 +81,11 @@ LIMIT 5
 -- yang memiliki huruf 'A' dalam nama depan (`first_name`).
 -- Gunakan alias `Nama_Karyawan` untuk kolom nama lengkap (`first_name` + ' ' + `last_name`).
 -- Urutkan berdasarkan `first_name` secara alfabetis.
+
+SELECT CONCAT(first_name, ' ', last_name) Nama_karyawan, 
+FROM employee_demographics
+;
+
 -- ============================================
 
 
