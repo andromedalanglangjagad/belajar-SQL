@@ -56,6 +56,12 @@ FROM parks_departments;
 -- Soal 1: Menampilkan Data Karyawan dan Departemen
 -- Tampilkan employee_id, first_name, dan department_name dari tabel employee_demographics
 -- dan department dengan menggunakan INNER JOIN. Hanya tampilkan karyawan yang memiliki departemen.
+
+SELECT dem.employee_id, dem.first_name, par.department_name
+FROM employee_demographics dem
+INNER JOIN parks_departments par
+	ON dem.employee_id = par.department_id
+;
 -- ============================================
 
 -- ============================================
