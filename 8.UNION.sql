@@ -24,3 +24,4 @@ WHERE salary > 70000
 ORDER BY first_name, last_name
 ;
 
+-- SOAL GPT
