@@ -68,6 +68,12 @@ INNER JOIN parks_departments par
 -- Soal 2: Menampilkan Semua Karyawan Beserta Departemennya
 -- Gunakan LEFT JOIN untuk menampilkan semua karyawan dari employee_demographics,
 -- termasuk yang tidak memiliki departemen. Jika tidak memiliki departemen, tampilkan NULL.
+
+SELECT *
+FROM employee_demographics dem
+LEFT JOIN parks_departments par
+	ON dem.employee_id = par.department_id
+;
 -- ============================================
 
 -- ============================================
