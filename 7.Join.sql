@@ -56,30 +56,35 @@ FROM parks_departments;
 -- Soal 1: Menampilkan Data Karyawan dan Departemen
 -- Tampilkan employee_id, first_name, dan department_name dari tabel employee_demographics
 -- dan department dengan menggunakan INNER JOIN. Hanya tampilkan karyawan yang memiliki departemen.
+-- ============================================
 
 -- ============================================
 -- Soal 2: Menampilkan Semua Karyawan Beserta Departemennya
 -- Gunakan LEFT JOIN untuk menampilkan semua karyawan dari employee_demographics,
 -- termasuk yang tidak memiliki departemen. Jika tidak memiliki departemen, tampilkan NULL.
+-- ============================================
 
 -- ============================================
 -- Soal 3: Menampilkan Semua Departemen Beserta Karyawannya
 -- Gunakan RIGHT JOIN untuk menampilkan semua departemen dan karyawan yang bekerja di departemen tersebut.
 -- Jika ada departemen tanpa karyawan, tetap tampilkan dengan nilai NULL di kolom karyawan.
+-- ============================================
 
 -- ============================================
 -- Soal 4: Menampilkan Semua Data dari Kedua Tabel
 -- Gunakan UNION dari LEFT JOIN dan RIGHT JOIN untuk membuat efek FULL JOIN,
 -- sehingga menampilkan semua karyawan dan semua departemen, termasuk yang tidak memiliki pasangan.
+-- ============================================
 
 -- ============================================
 -- Soal 5: Menampilkan Semua Kombinasi Karyawan dan Departemen
 -- Gunakan CROSS JOIN untuk menampilkan semua kombinasi antara karyawan dan departemen.
 -- Pastikan tidak ada kondisi ON agar menghasilkan perkalian Cartesian.
+-- ============================================
 
 -- ============================================
 -- Soal 6: Menampilkan Nama Karyawan dan Nama Manajernya
 -- Gunakan SELF JOIN pada tabel employee_demographics untuk menampilkan employee_id, first_name karyawan,
 -- serta first_name manajer mereka berdasarkan kolom manager_id.
-
+-- ============================================
 
