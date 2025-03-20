@@ -80,6 +80,12 @@ LEFT JOIN parks_departments par
 -- Soal 3: Menampilkan Semua Departemen Beserta Karyawannya
 -- Gunakan RIGHT JOIN untuk menampilkan semua departemen dan karyawan yang bekerja di departemen tersebut.
 -- Jika ada departemen tanpa karyawan, tetap tampilkan dengan nilai NULL di kolom karyawan.
+
+SELECT *
+FROM parks_departments par
+RIGHT JOIN employee_salary sal
+	ON sal.dept_id = par.department_id
+;
 -- ============================================
 
 -- ============================================
