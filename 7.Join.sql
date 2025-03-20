@@ -50,3 +50,4 @@ SELECT *
 FROM parks_departments;
 
 
+-- SOAL GPT
