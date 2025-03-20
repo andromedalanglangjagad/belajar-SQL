@@ -69,10 +69,10 @@ INNER JOIN parks_departments par
 -- Gunakan LEFT JOIN untuk menampilkan semua karyawan dari employee_demographics,
 -- termasuk yang tidak memiliki departemen. Jika tidak memiliki departemen, tampilkan NULL.
 
-SELECT *
-FROM employee_demographics dem
+SELECT employee_id, first_name, last_name, occupation, dept_id, department_id
+FROM employee_salary sal
 LEFT JOIN parks_departments par
-	ON dem.employee_id = par.department_id
+	ON sal.dept_id = par.department_id
 ;
 -- ============================================
 
