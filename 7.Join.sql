@@ -92,6 +92,9 @@ RIGHT JOIN employee_salary sal
 -- Soal 4: Menampilkan Semua Data dari Kedua Tabel
 -- Gunakan UNION dari LEFT JOIN dan RIGHT JOIN untuk membuat efek FULL JOIN,
 -- sehingga menampilkan semua karyawan dan semua departemen, termasuk yang tidak memiliki pasangan.
+
+SELECT *
+FROM 
 -- ============================================
 
 -- ============================================
