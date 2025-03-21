@@ -70,3 +70,7 @@ FROM layoffs_stagging
 DELETE 
 FROM duplicate_cte
 WHERE ROW_NUM > 1;
+
+
+
+
