@@ -54,5 +54,19 @@ WHERE ROW_NUM > 1;
 
 SELECT *
 FROM layoffs_stagging
-WHERE company = 'oda';
+WHERE company = 'Casper';
 
+
+
+WITH duplicate_cte AS
+(
+SELECT *,
+ROW_NUMBER() OVER(
+PARTITION BY company, location, 
+industry, total_laid_off, percentage_laid_off, `date`,stage, country
+, funds_raised_millions) ROW_NUM
+FROM layoffs_stagging
+)
+SELECT *
+FROM duplicate_cte
+WHERE ROW_NUM > 1;
