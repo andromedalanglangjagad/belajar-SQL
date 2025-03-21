@@ -106,3 +106,6 @@ DELETE
 FROM layoffs_stagging2
 WHERE ROW_NUM > 1
 ;
+
+
+SET SQL_SAFE_UPDATES = 1;
