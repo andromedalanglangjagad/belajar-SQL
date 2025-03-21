@@ -88,6 +88,7 @@ CREATE TABLE `layoffs_stagging2` (
 
 SELECT *
 FROM layoffs_stagging2
+WHERE ROW_NUM > 1
 ;
 
 
@@ -101,4 +102,7 @@ FROM layoffs_stagging;
 
 
 
-
+DELETE
+FROM layoffs_stagging2
+WHERE ROW_NUM > 1
+;
