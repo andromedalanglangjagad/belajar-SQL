@@ -54,7 +54,7 @@ WHERE ROW_NUM > 1;
 
 SELECT *
 FROM layoffs_stagging
-WHERE company = 'Casper';
+WHERE company = 'Yahoo';
 
 
 
@@ -67,6 +67,6 @@ industry, total_laid_off, percentage_laid_off, `date`,stage, country
 , funds_raised_millions) ROW_NUM
 FROM layoffs_stagging
 )
-SELECT *
+DELETE 
 FROM duplicate_cte
 WHERE ROW_NUM > 1;
