@@ -145,11 +145,18 @@ SET country = TRIM(TRAILING '.' FROM country)
 WHERE country LIKE 'united states%'
 ;
 
-SELECT `date`,
-STR_TO_DATE(`date`, '%M/%d/%Y')
+SELECT `date`
 FROM layoffs_stagging2;
 
 
+UPDATE layoffs_stagging2
+SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
+
+ALTER TABLE layoffs_stagging2
+MODIFY COLUMN `date` DATE;
+
+SELECT *
+FROM layoffs_stagging2;
 
 
 
