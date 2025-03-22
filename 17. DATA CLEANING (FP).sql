@@ -136,5 +136,20 @@ SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%'
 ;
 
+SELECT DISTINCT country, TRIM(TRAILING '.' FROM country)
+FROM layoffs_stagging2
+ORDER BY 1;
+
+UPDATE layoffs_stagging2
+SET country = TRIM(TRAILING '.' FROM country)
+WHERE country LIKE 'united states%'
+;
+
+SELECT `date`,
+STR_TO_DATE(`date`, '%M/%d/%Y')
+FROM layoffs_stagging2;
+
+
+
 
 
