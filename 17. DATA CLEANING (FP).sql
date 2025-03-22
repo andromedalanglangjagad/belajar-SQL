@@ -149,6 +149,7 @@ SELECT `date`
 FROM layoffs_stagging2;
 
 
+-- Penulisan perubahan tipe data di sql vvvvvvvvvvv
 UPDATE layoffs_stagging2
 SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
 
