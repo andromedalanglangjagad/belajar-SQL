@@ -105,5 +105,30 @@ FROM layoffs_stagging2
 WHERE ROW_NUM > 1
 ;
 
+SELECT *
+FROM layoffs_stagging2;
 
-SET SQL_SAFE_UPDATES = 1;
+SET SQL_SAFE_UPDATES = 0;
+
+
+-- Standardizing Data
+
+SELECT company, TRIM(company)
+FROM layoffs_stagging2
+;
+
+UPDATE layoffs_stagging2
+SET company = TRIM(company);
+
+SELECT DISTINCT industry
+FROM layoffs_stagging2
+ORDER BY 1
+;
+
+UPDATE layoffs_stagging2
+SET industry = 'Crypto'
+WHERE industry LIKE 'Crypto%'
+;
+
+
+
