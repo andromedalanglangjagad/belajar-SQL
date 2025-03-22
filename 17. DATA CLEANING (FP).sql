@@ -113,12 +113,18 @@ SET SQL_SAFE_UPDATES = 0;
 
 -- Standardizing Data
 
+
+-- TRIM untuk menghapus karakter yang tidak diinginkan di awal dan akhir
+-- entah spasi atau karakter khusus lain
 SELECT company, TRIM(company)
 FROM layoffs_stagging2
 ;
 
 UPDATE layoffs_stagging2
 SET company = TRIM(company);
+
+
+-- DISTINCT menghapus duplikat data, dan hanya menampilkan nilai unik dalam hasil query
 
 SELECT DISTINCT industry
 FROM layoffs_stagging2
