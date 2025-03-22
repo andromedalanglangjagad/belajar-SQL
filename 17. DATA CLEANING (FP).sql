@@ -153,6 +153,8 @@ FROM layoffs_stagging2;
 UPDATE layoffs_stagging2
 SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
 
+
+-- ALTER TABLE untuk mengubah struktur tabel yang sudah ada
 ALTER TABLE layoffs_stagging2
 MODIFY COLUMN `date` DATE;
 
