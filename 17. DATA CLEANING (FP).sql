@@ -29,9 +29,8 @@ SELECT *
 FROM layoffs
 ;
 
-
-
-
+-- D. Tandai jumlah baris(ROW) yang memiliki data berbeda/Unique
+-- 		ada di table stagging :
 SELECT *,
 ROW_NUMBER() OVER(
 PARTITION BY company, industry, total_laid_off, percentage_laid_off, `date`) ROW_NUM
