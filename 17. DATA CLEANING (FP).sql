@@ -102,6 +102,7 @@ FROM layoffs_stagging2
 WHERE ROW_NUM > 1
 ;
 
+-- K. Hapus data yang tidak diperlukan dari table stagging 2 :
 DELETE
 FROM layoffs_stagging2
 WHERE ROW_NUM > 1
