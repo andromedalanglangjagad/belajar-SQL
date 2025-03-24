@@ -52,13 +52,14 @@ SELECT *
 FROM duplicate_cte
 WHERE ROW_NUM > 1;
 
--- F. Cek satu persatu untuk data yang sama dan  memiliki lebih dari satu baris :
+-- F. Cek satu persatu untuk data yang sama dan  memiliki lebih dari satu baris 
+-- 		yang berada di table stagging :
 SELECT *
 FROM layoffs_stagging
 WHERE company = 'Yahoo';
 
 
-
+-- G. Hapus data yang tidak diinginkan di dalam virtual table :
 WITH duplicate_cte AS
 (
 SELECT *,
