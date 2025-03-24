@@ -37,6 +37,8 @@ PARTITION BY company, industry, total_laid_off, percentage_laid_off, `date`) ROW
 FROM layoffs_stagging
 ;
 
+-- E. Masukkan penanda jumlah baris ke virtual table untuk mengetahui 
+-- 		apakah ada data yang sama dalam perhitungan baris :
 WITH duplicate_cte AS
 (
 SELECT *,
