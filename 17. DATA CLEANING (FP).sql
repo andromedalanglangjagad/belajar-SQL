@@ -52,7 +52,7 @@ SELECT *
 FROM duplicate_cte
 WHERE ROW_NUM > 1;
 
-
+-- F. Cek satu persatu untuk data yang sama dan  memiliki lebih dari satu baris :
 SELECT *
 FROM layoffs_stagging
 WHERE company = 'Yahoo';
