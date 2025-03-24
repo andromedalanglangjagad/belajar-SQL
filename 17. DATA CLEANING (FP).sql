@@ -87,7 +87,7 @@ CREATE TABLE `layoffs_stagging2` (
   `row_num` INT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
+-- I. Masukkan data dari table stagging awal ke stagging 2 :
 INSERT INTO layoffs_stagging2
 SELECT *,
 ROW_NUMBER() OVER(
