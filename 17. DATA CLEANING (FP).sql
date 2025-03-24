@@ -111,6 +111,7 @@ WHERE ROW_NUM > 1
 SELECT *
 FROM layoffs_stagging2;
 
+-- Fitur untuk menyalakan dan mematikan perubahan data di MYSQL :
 SET SQL_SAFE_UPDATES = 0;
 
 
