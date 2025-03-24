@@ -23,7 +23,7 @@ SELECT *
 FROM layoffs_stagging
 ;
 
-
+-- C. Masukan data table utama ke table stagging :
 INSERT layoffs_stagging
 SELECT * 
 FROM layoffs
