@@ -14,7 +14,7 @@ FROM layoffs
 -- 3. Null Values or blank values
 -- 4. Remove Any Columns 
 
-
+-- A buat table untuk stagging
 CREATE TABLE layoffs_stagging
 LIKE layoffs;
 
