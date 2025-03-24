@@ -73,7 +73,7 @@ DELETE
 FROM duplicate_cte
 WHERE ROW_NUM > 1;
 
-
+-- H. Buat table stagging 2 untuk memeriksa lebih detail data yang dibersihkan :
 CREATE TABLE `layoffs_stagging2` (
   `company` text,
   `location` text,
