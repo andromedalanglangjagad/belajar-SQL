@@ -14,11 +14,11 @@ FROM layoffs
 -- 3. Null Values or blank values
 -- 4. Remove Any Columns 
 
--- A buat table untuk stagging
+-- A buat table untuk stagging dengan struktur table utama :
 CREATE TABLE layoffs_stagging
 LIKE layoffs;
 
-
+-- B. Cek apakah sudah sesuai struktur table utama :
 SELECT *
 FROM layoffs_stagging
 ;
