@@ -87,7 +87,7 @@ CREATE TABLE `layoffs_stagging2` (
   `row_num` INT
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- I. Masukkan data dari table stagging awal ke stagging 2 :
+-- I. Masukkan data dan pemeriksaan baris dari table stagging awal ke stagging 2 :
 INSERT INTO layoffs_stagging2
 SELECT *,
 ROW_NUMBER() OVER(
@@ -96,7 +96,7 @@ industry, total_laid_off, percentage_laid_off, `date`,stage, country
 , funds_raised_millions) ROW_NUM
 FROM layoffs_stagging;
 
-
+-- J. Lihat apakah masihada data yang tidak diperlukan(mirip, beda sintaks dll) :
 SELECT *
 FROM layoffs_stagging2
 WHERE ROW_NUM > 1
