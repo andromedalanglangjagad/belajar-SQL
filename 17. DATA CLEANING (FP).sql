@@ -107,7 +107,7 @@ DELETE
 FROM layoffs_stagging2
 WHERE ROW_NUM > 1
 ;
-
+-- L. Cek apakah data sudah bersih :
 SELECT *
 FROM layoffs_stagging2;
 
