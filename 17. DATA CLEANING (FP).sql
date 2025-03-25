@@ -152,6 +152,7 @@ SET country = TRIM(TRAILING '.' FROM country)
 WHERE country LIKE 'united states%'
 ;
 
+-- melihat apakah jenis data dan format penulisan tanggal sudah benar atau tidak
 SELECT `date`
 FROM layoffs_stagging2;
 
