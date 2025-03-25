@@ -146,6 +146,7 @@ SELECT DISTINCT country, TRIM(TRAILING '.' FROM country)
 FROM layoffs_stagging2
 ORDER BY 1;
 
+-- Merubah karakter unik dalam penulisan nilai data agar menjadi data siap pakai
 UPDATE layoffs_stagging2
 SET country = TRIM(TRAILING '.' FROM country)
 WHERE country LIKE 'united states%'
