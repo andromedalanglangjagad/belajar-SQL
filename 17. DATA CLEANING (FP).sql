@@ -167,6 +167,7 @@ SET `date` = STR_TO_DATE(`date`, '%m/%d/%Y');
 ALTER TABLE layoffs_stagging2
 MODIFY COLUMN `date` DATE;
 
+-- Kita cek apakah data sudah benar
 SELECT *
 FROM layoffs_stagging2;
 
