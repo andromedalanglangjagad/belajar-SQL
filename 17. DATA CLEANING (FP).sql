@@ -141,6 +141,7 @@ SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%'
 ;
 
+-- Menghapus karakter unik dalam penulisan nilai data agar menjadi data siap pakai
 SELECT DISTINCT country, TRIM(TRAILING '.' FROM country)
 FROM layoffs_stagging2
 ORDER BY 1;
