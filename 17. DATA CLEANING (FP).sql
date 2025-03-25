@@ -135,6 +135,7 @@ FROM layoffs_stagging2
 ORDER BY 1
 ;
 
+-- Mengubah data ganda dengan penulisan berbeda menjadi satu data utuh
 UPDATE layoffs_stagging2
 SET industry = 'Crypto'
 WHERE industry LIKE 'Crypto%'
