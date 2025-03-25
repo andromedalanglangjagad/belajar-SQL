@@ -115,7 +115,7 @@ FROM layoffs_stagging2;
 SET SQL_SAFE_UPDATES = 0;
 
 
--- Standardizing Data
+-- ~~~~~~~~~~~~~~~~~~~  Standardizing Data :
 
 
 -- TRIM untuk menghapus karakter yang tidak diinginkan di awal dan akhir
