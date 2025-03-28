@@ -55,7 +55,7 @@ WHERE ROW_NUM > 1;
 -- F. Cek satu persatu untuk data yang sama dan  memiliki lebih dari satu baris 
 -- 		yang berada di table stagging :
 SELECT *
-FROM layoffs_stagging
+FROM layoffs_stagging2
 WHERE company = 'Yahoo';
 
 
@@ -96,6 +96,15 @@ industry, total_laid_off, percentage_laid_off, `date`,stage, country
 , funds_raised_millions) ROW_NUM
 FROM layoffs_stagging;
 
+
+
+SELECT *,
+ROW_NUMBER() OVER(
+PARTITION BY company, location, 
+industry, total_laid_off, percentage_laid_off, `date`,stage, country
+, funds_raised_millions) ROW_NUM
+FROM layoffs_stagging2;
+
 -- J. Lihat apakah masih ada data yang tidak diperlukan(mirip, beda sintaks dll) :
 SELECT *
 FROM layoffs_stagging2
@@ -103,7 +112,7 @@ WHERE ROW_NUM > 1
 ;
 
 -- K. Hapus data yang tidak diperlukan dari table stagging 2 :
-DELETE
+DELETE 
 FROM layoffs_stagging2
 WHERE ROW_NUM > 1
 ;
