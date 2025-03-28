@@ -184,8 +184,11 @@ AND percentage_laid_off IS NULL
 ;
 
 
-SELECT DISTINCT industry
+SELECT *
 FROM layoffs_stagging2
+WHERE industry IS NULL
+OR industry = ''
+;
 
 
 
