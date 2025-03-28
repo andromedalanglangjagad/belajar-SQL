@@ -217,7 +217,7 @@ AND t2.industry IS NOT NULL;
 
 
 SELECT *
-FROM layoffs_stagging2
+FROM layoffs_stagging2;
 
 
 
