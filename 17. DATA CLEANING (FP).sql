@@ -96,7 +96,7 @@ industry, total_laid_off, percentage_laid_off, `date`,stage, country
 , funds_raised_millions) ROW_NUM
 FROM layoffs_stagging;
 
--- J. Lihat apakah masihada data yang tidak diperlukan(mirip, beda sintaks dll) :
+-- J. Lihat apakah masih ada data yang tidak diperlukan(mirip, beda sintaks dll) :
 SELECT *
 FROM layoffs_stagging2
 WHERE ROW_NUM > 1
@@ -170,6 +170,17 @@ MODIFY COLUMN `date` DATE;
 -- Kita cek apakah data sudah benar
 SELECT *
 FROM layoffs_stagging2;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
