@@ -178,10 +178,14 @@ MODIFY COLUMN `date` DATE;
 
 -- Kita cek apakah data sudah benar
 SELECT *
-FROM layoffs_stagging2;
+FROM layoffs_stagging2
+WHERE total_laid_off IS NULL
+AND percentage_laid_off IS NULL
+;
 
 
-
+SELECT DISTINCT industry
+FROM layoffs_stagging2
 
 
 
