@@ -55,3 +55,19 @@ FROM layoffs_stagging2
 GROUP BY company
 ORDER BY 2 DESC
 ;
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
