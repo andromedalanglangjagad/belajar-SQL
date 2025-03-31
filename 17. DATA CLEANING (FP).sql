@@ -183,6 +183,7 @@ WHERE total_laid_off IS NULL
 AND percentage_laid_off IS NULL
 ;
 
+-- ubah data kosong menjadi NULL  
 UPDATE layoffs_stagging2
 SET industry = NULL
 WHERE industry = '';
