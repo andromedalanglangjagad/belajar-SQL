@@ -188,6 +188,8 @@ UPDATE layoffs_stagging2
 SET industry = NULL
 WHERE industry = '';
 
+-- cek apakah ada data yang masih kosong di row tertentu, dan juga 
+-- cek data yang sudah diubah menjadi NULL tadi
 SELECT *
 FROM layoffs_stagging2
 WHERE industry IS NULL
