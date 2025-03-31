@@ -221,7 +221,7 @@ WHERE t1.industry IS NULL
 AND t2.industry IS NOT NULL;
 
 
-
+-- konfirmasi keseluruhan 
 SELECT *
 FROM layoffs_stagging2;
 
