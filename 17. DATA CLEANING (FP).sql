@@ -203,7 +203,7 @@ WHERE company LIKE '%bally%'
 ;
 
 -- Join antar coloumn untuk identifikasi data tiap row yang kemungkinan salah 
-SELECT t1.industry, t2.industry
+SELECT t1.industry, t1.company, t2.industry, t2.company
 FROM layoffs_stagging2 t1
 JOIN layoffs_stagging2 t2
 	ON t1.company = t2.company
@@ -223,7 +223,9 @@ AND t2.industry IS NOT NULL;
 
 -- konfirmasi keseluruhan 
 SELECT *
-FROM layoffs_stagging2;
+FROM layoffs_stagging2
+WHERE industry IS NULL
+;
 
 
 
