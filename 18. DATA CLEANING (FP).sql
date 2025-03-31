@@ -37,4 +37,21 @@ SELECT *
 FROM layoffs_stagging2
 ;
 
+SELECT YEAR(`date`), SUM(total_laid_off)
+FROM layoffs_stagging2
+GROUP BY YEAR(`date`)
+ORDER BY 1 DESC
+;
 
+SELECT stage, SUM(total_laid_off)
+FROM layoffs_stagging2
+GROUP BY stage
+ORDER BY 2 DESC
+;
+
+
+SELECT company, SUM(percentage_laid_off)
+FROM layoffs_stagging2
+GROUP BY company
+ORDER BY 2 DESC
+;
