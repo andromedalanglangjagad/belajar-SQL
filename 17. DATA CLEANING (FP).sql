@@ -196,6 +196,7 @@ WHERE industry IS NULL
 OR industry = ''
 ;
 
+-- cari dan identifikasi data tertentu dengan keywordnya
 SELECT *
 FROM layoffs_stagging2
 WHERE company LIKE '%bally%'
