@@ -212,6 +212,7 @@ AND t2.industry IS NOT NULL
     
 ;
 
+-- cocokan dan gabungkan coloumn jika ada kesalahan data pada row tertentu 
 UPDATE layoffs_stagging2 t1
 JOIN layoffs_stagging2 t2
 	ON t1.company = t2.company
