@@ -188,7 +188,7 @@ UPDATE layoffs_stagging2
 SET industry = NULL
 WHERE industry = '';
 
--- cek apakah ada data yang masih kosong di row tertentu, dan juga 
+-- cek apakah ada data yang masih kosong di row tertentu dalam sebuah coloumn, dan juga 
 -- cek data yang sudah diubah menjadi NULL tadi
 SELECT *
 FROM layoffs_stagging2
@@ -202,6 +202,7 @@ FROM layoffs_stagging2
 WHERE company LIKE '%bally%'
 ;
 
+-- Join antar coloumn untuk identifikasi data tiap row yang kemungkinan salah 
 SELECT t1.industry, t2.industry
 FROM layoffs_stagging2 t1
 JOIN layoffs_stagging2 t2
